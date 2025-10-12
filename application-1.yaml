@@ -10,9 +10,12 @@ spec:
   source:
     helm:
       releaseName: application-from-helm
-      parameters:
-        - name: "replicaCount"
-          value: "3"
+      ## use valueFiles instead
+      # parameters:
+      #   - name: "replicaCount"
+      #     value: "2"
+      valueFiles:
+        - custom-values.yaml
     repoURL: https://github.com/gr8coder8/learning-argocd.git
     targetRevision: master
     path: v03-argocd-applications/helm/nginx
