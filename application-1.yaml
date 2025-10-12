@@ -15,7 +15,7 @@ spec:
       #   - name: "replicaCount"
       #     value: "2"
       valueFiles:
-        - custom-values.yaml
+        - custom-values.yaml # custom values file to override default values.yaml in the helm chart
     repoURL: https://github.com/gr8coder8/learning-argocd.git
     targetRevision: master
     path: v03-argocd-applications/helm/nginx # helm manifests location. See application-2.yaml for directly referencing helm chart
