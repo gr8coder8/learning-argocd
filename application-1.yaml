@@ -18,4 +18,4 @@ spec:
         - custom-values.yaml
     repoURL: https://github.com/gr8coder8/learning-argocd.git
     targetRevision: master
-    path: v03-argocd-applications/helm/nginx
+    path: v03-argocd-applications/helm/nginx # helm manifests location. See application-2.yaml for directly referencing helm chart
