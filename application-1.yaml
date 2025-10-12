@@ -8,6 +8,11 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
+    helm:
+      releaseName: application-from-helm
+      parameters:
+        - name: "replicaCount"
+          value: "3"
     repoURL: https://github.com/gr8coder8/learning-argocd.git
     targetRevision: master
     path: v03-argocd-applications/helm/nginx
