@@ -2,6 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: application-directory
+  namespace: argocd
 spec:
   destination:
     namespace: directory
@@ -9,8 +10,8 @@ spec:
   project: default
   source:
     directory: # like helm, here it is directory
-      # exclude: 'serviceaccount.yaml' # exclude only this file
-      include: '{serviceaccount.yaml,service.yaml}' # include only these files but exclude all others
+      exclude: 'serviceaccount.yaml' # exclude only this file
+      # include: '{serviceaccount.yaml,service.yaml}' # include only these files but exclude all others
     path: v03-argocd-applications/directoryOfmanifests/ # directory
     repoURL: https://github.com/gr8coder8/learning-argocd.git
     targetRevision: master
