@@ -1,0 +1,6 @@
+# helm install  argocd argo/argo-cd -n argocd -f values.yaml
+server:
+  service:
+    type: NodePort
+    nodePortHttp: 32073
+    nodePortHttps: 32074
